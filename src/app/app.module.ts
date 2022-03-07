@@ -9,20 +9,24 @@ import { HeaderComponent } from './core/header/header.component';
 import { HomeComponent } from './component/home/home.component';
 import { AddExpensesComponent } from './component/add-expenses/add-expenses.component';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { ShowExpensesComponent } from './component/show-expenses/show-expenses.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    AddExpensesComponent
+    AddExpensesComponent,
+    ShowExpensesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

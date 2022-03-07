@@ -1,0 +1,11 @@
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <div class="example-box" *ngFor="let expenses of showAllExpenses | paginate: { itemsPerPage: 5, currentPage: page }" cdkDrag>
+    {{expenses.expensesDate}}
+    {{expenses.expensesCategory}}
+    {{expenses.expensesAmount}}
+    {{expenses.expensesDescription}}
+    <img *cdkDragPreview [src]="expenses.expensesAmount" [alt]="expenses.expensesDescription">
+  </div>
+</div>
+
+<pagination-controls (pageChange)="page = $event"></pagination-controls>

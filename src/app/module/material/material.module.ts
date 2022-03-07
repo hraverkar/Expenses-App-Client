@@ -52,6 +52,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [],
   exports: [
+  
     FormsModule,
     ReactiveFormsModule,
     CommonModule,

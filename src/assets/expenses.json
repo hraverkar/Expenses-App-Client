@@ -1,0 +1,86 @@
+[
+    {
+        "id": 10001,
+        "expensesDate": "2019-01-01",
+        "expensesAmount": 100,
+        "expensesDescription": "test",
+        "expensesCategory": "Food"
+    },
+    {
+        "id": 10002,
+        "expensesDate": "2019-01-01",
+        "expensesAmount": 100,
+        "expensesDescription": "test",
+        "expensesCategory": "Travel"
+    },
+    {
+        "id": 10003,
+        "expensesDate": "2019-01-01",
+        "expensesAmount": 100,
+        "expensesDescription": "test",
+        "expensesCategory": "Entertainment"
+    },
+    {
+        "id": 10004,
+        "expensesDate": "2019-01-01",
+        "expensesAmount": 100,
+        "expensesDescription": "test",
+        "expensesCategory": "Shopping"
+    },
+    {
+        "id": 10005,
+        "expensesDate": "2019-01-01",
+        "expensesAmount": 100,
+        "expensesDescription": "test",
+        "expensesCategory": "Education"
+    },
+    {
+        "id": 10006,
+        "expensesDate": "2019-01-01",
+        "expensesAmount": 100,
+        "expensesDescription": "test",
+        "expensesCategory": "Health"
+    },
+    {
+        "id": 10007,
+        "expensesDate": "2019-01-01",
+        "expensesAmount": 100,
+        "expensesDescription": "test",
+        "expensesCategory": "Utilities"
+    },
+    {
+        "id": 10008,
+        "expensesDate": "2019-01-01",
+        "expensesAmount": 100,
+        "expensesDescription": "test",
+        "expensesCategory": "Food"
+    },
+    {
+        "id": 10009,
+        "expensesDate": "2019-01-01",
+        "expensesAmount": 100,
+        "expensesDescription": "test",
+        "expensesCategory": "Personal"
+    },
+    {
+        "id": 10010,
+        "expensesDate": "2019-01-01",
+        "expensesAmount": 100,
+        "expensesDescription": "test",
+        "expensesCategory": "Other"
+    },
+    {
+        "id": 10011,
+        "expensesDate": "2019-01-01",
+        "expensesAmount": 100,
+        "expensesDescription": "test",
+        "expensesCategory": "Food"
+    },
+    {
+        "id": 10012,
+        "expensesDate": "2019-01-01",
+        "expensesAmount": 100,
+        "expensesDescription": "test",
+        "expensesCategory": "Food"
+    }
+]

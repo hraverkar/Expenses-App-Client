@@ -40,10 +40,12 @@ export class AddExpensesComponent implements OnInit {
   }
 
   public addExpenses() {
+    this.spinner.show();
     console.log(this.dateValue);
     console.log(this.amountValue);
     console.log(this.categoryValue);
     let t  = _.filter(this.categories, function(o) { return o.selected; });
     console.log(t);
+    this.spinner.hide();
   }
 }
