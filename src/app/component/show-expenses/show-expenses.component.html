@@ -1,11 +1,76 @@
-<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-  <div class="example-box" *ngFor="let expenses of showAllExpenses | paginate: { itemsPerPage: 5, currentPage: page }" cdkDrag>
-    {{expenses.expensesDate}}
-    {{expenses.expensesCategory}}
-    {{expenses.expensesAmount}}
-    {{expenses.expensesDescription}}
-    <img *cdkDragPreview [src]="expenses.expensesAmount" [alt]="expenses.expensesDescription">
+<div class="col-xl-8">
+  <div class="card card-stretch mb-5 mb-xxl-8">
+    <div class="card-header border-0 pt-5 ">
+      <h3 class="card-title align-items-start flex-column"><span class="card-label fw-bolder text-dark fs-3">
+        Expenses Board</span><span class="text-muted mt-2 fw-bold fs-6">{{totalExpensesAmount}}</span></h3>
+    </div>
+    <div class="card-body pt-2 pb-0 mt-n3">
+      <div class="tab-content mt-5" id="myTabTables1">
+        <div class="tab-pane fade active show" id="kt_tab_pane_1_1" role="tabpanel" aria-labelledby="kt_tab_pane_1_1">
+          <div class="table-responsive">
+            <table class="table table-borderless align-middle">
+              <thead>
+                <tr>
+                  <th class="p-0 w-50px"></th>
+                  <th class="p-0 min-w-200px"></th>
+                  <th class="p-0 min-w-100px"></th>
+                  <th class="p-0 min-w-40px"></th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let expenses of showAllExpenses | paginate: { itemsPerPage: 5, currentPage: page }">
+                <tr>
+                  <th class="px-0 py-3">
+                    <div class="symbol symbol-65px me-5"><span class="symbol-label bg-light-success"><span
+                          class="svg-icon svg-icon-1 svg-icon-success"><svg width="24px" height="24px"
+                            viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" class="mh-50px">
+                            <path
+                              d="M16,15.6315789 L16,12 C16,10.3431458 14.6568542,9 13,9 L6.16183229,9 L6.16183229,5.52631579 C6.16183229,4.13107011 7.29290239,3 8.68814808,3 L20.4776218,3 C21.8728674,3 23.0039375,4.13107011 23.0039375,5.52631579 L23.0039375,13.1052632 L23.0206157,17.786793 C23.0215995,18.0629336 22.7985408,18.2875874 22.5224001,18.2885711 C22.3891754,18.2890457 22.2612702,18.2363324 22.1670655,18.1421277 L19.6565168,15.6315789 L16,15.6315789 Z"
+                              id="Combined-Shape" fill="#000000"></path>
+                            <path
+                              d="M1.98505595,18 L1.98505595,13 C1.98505595,11.8954305 2.88048645,11 3.98505595,11 L11.9850559,11 C13.0896254,11 13.9850559,11.8954305 13.9850559,13 L13.9850559,18 C13.9850559,19.1045695 13.0896254,20 11.9850559,20 L4.10078614,20 L2.85693427,21.1905292 C2.65744295,21.3814685 2.34093638,21.3745358 2.14999706,21.1750444 C2.06092565,21.0819836 2.01120804,20.958136 2.01120804,20.8293182 L2.01120804,18.32426 C1.99400175,18.2187196 1.98505595,18.1104045 1.98505595,18 Z M6.5,14 C6.22385763,14 6,14.2238576 6,14.5 C6,14.7761424 6.22385763,15 6.5,15 L11.5,15 C11.7761424,15 12,14.7761424 12,14.5 C12,14.2238576 11.7761424,14 11.5,14 L6.5,14 Z M9.5,16 C9.22385763,16 9,16.2238576 9,16.5 C9,16.7761424 9.22385763,17 9.5,17 L11.5,17 C11.7761424,17 12,16.7761424 12,16.5 C12,16.2238576 11.7761424,16 11.5,16 L9.5,16 Z"
+                              id="Combined-Shape" fill="#000000" opacity="0.3"></path>
+                          </svg></span></span></div>
+                  </th>
+                  <td class="ps-0"><a
+                      class="text-gray-800 fw-bolder text-hover-primary fs-6">{{expenses.expensesCategory}} </a><span
+                      class="text-muted fw-bold d-block mt-1">{{expenses.expensesDate}}</span></td>
+                  <td>
+                    <div class="d-flex flex-column w-100 me-3">
+                      <div class="d-flex align-items-center justify-content-between mb-2"><span
+                          class="text-dark me-2 fs-6 fw-bolder">{{expenses.expensesAmount}} &#8377;</span></div>
+                      <div class="d-flex align-items-center">
+                        <div class="progress h-6px  w-100 bg-light-primary">
+                          <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                            aria-valuemax="100" style="width: 100%;"></div>
+                        </div><span class="text-muted fs-7 fw-bold ps-3">100%</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-end pe-0"><a class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"><span
+                        class="svg-icon svg-icon-4"><svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1"
+                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="mh-50px">
+                          <g id="Stockholm-icons-/-Navigation-/-Arrow-right" stroke="none" stroke-width="1" fill="none"
+                            fill-rule="evenodd">
+                            <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                            <rect id="Rectangle" fill="#000000" opacity="0.5"
+                              transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) "
+                              x="11" y="5" width="2" height="14" rx="1"></rect>
+                            <path
+                              d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z"
+                              id="Path-94" fill="#000000" fill-rule="nonzero"
+                              transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997) ">
+                            </path>
+                          </g>
+                        </svg></span></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
 
 <pagination-controls (pageChange)="page = $event"></pagination-controls>

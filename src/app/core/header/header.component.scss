@@ -5,3 +5,8 @@
 .color {
   color: red;
 }
+
+::ng-deep .mat-toolbar.mat-primary {
+    background: #0d6efd;
+    color: #fff;
+}

@@ -11,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class ShowExpensesComponent implements OnInit {
   public showAllExpenses: IExpenseInfo[];
   public page: any;
+  public totalExpensesAmount: number = 0;
   constructor(private expenseService: ExpenseService) { }
 
   ngOnInit(): void {
@@ -20,6 +21,14 @@ export class ShowExpensesComponent implements OnInit {
   public getAllExpenses() {
     this.expenseService.getAllExpenses().subscribe((res) => {
       this.showAllExpenses = res.body;
+      this.getTotalAmount();
+    });
+  }
+
+  public getTotalAmount() {
+    console.log(this.showAllExpenses[0].expensesAmount);
+    this.showAllExpenses.forEach((expense) => {
+      this.totalExpensesAmount += expense.expensesAmount;
     });
   }
 
